@@ -1,0 +1,40 @@
+
+<div class="arrow">
+    <img src="newarrow.png" alt="arrow">
+</div>
+
+<h3>the next, cheapest flight is to...</h3>
+  <div class="textbody-city">
+  <h1>{{ data.city }}, {{ data.country }}</h1>
+  </div>
+
+  <div class="skyscanner-parent">
+  <ul>
+    <li>airfare:<span></span> ${{ data.cost }} (roundtrip)</li>
+    <li>carrier:<span></span> {{ data.aircraft[0].Name }}</li>
+    <li>departs:<span></span> {{ data.depart }}</li>
+    <li>returns:<span></span> {{ data.return }}</li>
+  <ul>
+  </div>
+
+
+  <div class="textbody-airbnb">
+  <h1 class="airbnb-header">airbnb listings:</h1>
+  </div>
+
+  <div class="airbnb-parent">
+    <div ng-repeat="listing in data.airbnb" class="listing" ng-style="{'background-image': 'url(' + listing.img + ')'}">
+    <a href="{{ listing.url }}" target="_blank">
+    <div class="hover-class">
+    <ul>
+    <li>cost:<span></span> ${{ listing.price }} / night</li>
+    <li>hood:<span></span> {{ listing.neighborhood }}</li>
+    <li>type:<span></span> {{ listing.type }}</li>
+    <li>review count:<span></span> {{ listing.reviewCount }}</li>
+    <li>{{ listing.starRating }} stars</li>
+    </ul>
+    </div>
+    </a>
+    </div>
+      <h3 class="airbnb-subheader">sorted by # of reviews with a star-rating >= 4</h3>
+  </div>

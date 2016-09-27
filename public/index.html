@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GTFO</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500i,700" rel="stylesheet">
+<script src="/angular/angular.min.js" defer></script>
+<script src="/angular-ui-router/release/angular-ui-router.js" defer></script>
+<script src="/js/form.controller.js" defer></script>
+<script src="/js/form.factory.js" defer></script>
+<script src="/js/app.states.js" defer></script>
+</head>
+
+<body>
+
+<body ng-app="budget-backpacker" id="wrapper">
+
+<div ng-controller="FormCtrl" class="user-box">
+  <form name="inputs" ng-submit="submit(fun)">
+    <input autocomplete="off" ng-model="fun.location" class="input" placeholder="city / airport code" type="text" name="location" required/>
+    <button id="button" type="submit">we out?</button>
+  </form>
+</div>
+
+
+  <ui-view></ui-view>
+
+</div>
+
+
+
+</div>
+
+
+</body>
+</html>
